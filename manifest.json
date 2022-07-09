@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "slack_theme_changer",
+  "version": "1.0",
+  "description": "",
+  "permissions":[
+    "storage"
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "action": {
+    "default_popup": "browser_action.html"
+  },
+  "content_scripts": [{
+    "matches": ["https://app.slack.com/*"],
+    "js": [
+      "main.js"
+    ]
+  }]
+}
